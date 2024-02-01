@@ -1,0 +1,9 @@
+@media (width < 768px) {
+  .header {
+    min-block-size: 323px;
+  }
+
+  .card {
+    margin-block-end: 52px;
+  }
+}

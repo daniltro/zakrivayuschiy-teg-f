@@ -15,8 +15,242 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  font-family: var(--main-font);
+  min-block-size: 100dvh;
+  font-family: var(--main-font), sans-serif;
   font-weight: var(--main-font-weight-text);
+  color: var(--accent-color);
+  background: var(--bg-color);
+  background-image: var(--bg-image);
+  padding-block-start: 102px;
+  padding-block-end: 105px;
 }
+
+.container {
+  max-inline-size: 700px;
+  inline-size: calc(100% - 4px);
+  margin: auto;
+}
+
+/* ---------------------------------------------------HEADER STYLES START---------------------------------------------- */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  min-block-size: 364px;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  outline: 2px solid var(--accent-color);
+  padding-block-end: 24px;
+  margin-block-end: 104px;
+}
+
+.header__title {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  margin-block-end: 20px;
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  margin-block-end: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: .875rem;
+  padding-inline-start: 18px;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  padding: 0;
+  transition: .3s;
+  position: relative;
+}
+
+.theme-menu__button:disabled {
+  opacity: .6;
+  position: relative;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::after {
+  content: '▶';
+  inline-size: 14px;
+  block-size: 14px;
+  opacity: 0.6;
+  position: absolute;
+  left: -20px;
+  animation: arrow .5s ease-in-out infinite alternate;
+} 
+.theme-menu__button:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button::before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  text-decoration: underline;
+  position: absolute;
+  background-color: var(--accent-color);
+  opacity: .6;
+  bottom: -3px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left ;
+  transition: transform .3s ease;
+}
+
+.theme-menu__button:focus-visible::before {
+  transform: scaleX(1);
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(4px);
+  }
+}
+/* ---------------------------------------------------HEADER STYLES END-------------------------------------------------- */
+
+/* ---------------------------------------------------CARDS STYLES START------------------------------------------------- */
+
+.cards {
+}
+.cards__list {
+}
+.cards__list-item {
+}
+.card {
+  margin-block-end: 50px;
+  background: var(--bg-color);
+  outline: 2px solid var(--accent-color);
+  outline-offset: -2px;
+}
+
+.card:last-child {
+  margin-block-end: 0;
+}
+
+.card__title {
+  padding: 3px 10px 4px;
+  font-size: 1.125rem;
+  border-inline: 2px solid var(--accent-color);
+  border-block-start: 2px solid var(--accent-color);
+  /* border: 2px solid var(--accent-color); */
+}
+.card__image-box {
+  max-block-size: 701px;
+ 
+  position: relative;
+}
+
+.card__subtitle {
+  mix-blend-mode: hard-light;
+  position: absolute;
+  right: 25px;
+  top: 27px;
+  font-family: var(--accent-font);
+  -webkit-text-stroke: 1px var(--text-stroke-color); 
+  opacity: .5;
+  font-size: .875rem;
+}
+
+
+.card__image {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid var(--accent-color);
+  
+}
+
+.card__content-box {
+  border-inline: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
+  padding: 26px 25px;
+}
+
+.card__description {
+  font-size: 1.125rem;
+  line-height: 21px;
+  margin-block-end: 26px;
+}
+
+.card__description:last-child {
+  margin-block-end: 0;
+}
+
+.cards__button-box {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 16px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.like-icon {
+  
+}
+
+.card__like-button {
+  font-family: var(--accent-font), sans-serif;
+  padding: 10px 35px;
+  background-color: transparent;
+  /* border: none; */
+  border: 2px solid var(--accent-color);
+  text-align: center;
+  font-size: 14px;
+  line-height: 90%;
+}
+
+
+
+/* ---------------------------------------------------CARDS STYLES END------------------------------------------------- */
+
+/*----------------------------------------------------FOOTER STYLES START------------------------------------------------- */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 54px 0 0;
+}
+.footer__button {
+  background-color: transparent;
+  border: none;
+  border: 2px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 21px;
+  font-family: var(--accent-font), sans-serif;
+  background-color: var(--bg-color);
+  font-size: 14px;
+  line-height: 90%;
+}
+
+
+/*----------------------------------------------------FOOTER STYLES END------------------------------------------------- */
