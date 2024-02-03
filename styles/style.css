@@ -228,7 +228,6 @@
   line-height: 21px;
   margin-block-end: 25px;
   font-weight: var(--main-font-weight-text);
-
 }
 
 .card__description:last-child {
@@ -308,6 +307,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .footer__button {
   background-color: transparent;
   display: flex;
