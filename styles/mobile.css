@@ -2,6 +2,10 @@
   .header {
     min-block-size: 323px;
   }
+
+  .card__subtitle {
+    right: 11px;
+  }
  
   .card__image {
     block-size: 372px;
@@ -11,20 +15,21 @@
     padding-inline-start: 23px;
   }
 
-  .footer__button {
+  .save-button {
     flex-direction: column;
     gap: 15px;
   }
 
-  .footer__button .button__text {
+  .save-button .button__text {
     display: block;
   }
 
-  .footer__button-floppy {
+  .save-button__floppy  {
     transform: scale(1.35);
   }
 
-  .footer__dialog {
+  .dialog {
+    top: 32%;
     padding: 30px 40px;
     max-inline-size: 341px;
   }

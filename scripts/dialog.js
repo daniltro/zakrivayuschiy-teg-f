@@ -1,7 +1,7 @@
-document.getElementById('footer-button').addEventListener('click', function() {
-  window['footer-dialog'].show();
+document.getElementById('dialog-open-button').addEventListener('click', function() {
+  window['dialog'].showModal();
 });
 
 document.getElementById('dialog-button').addEventListener('click', function() {
-  window['footer-dialog'].close();
+  window['dialog'].close();
 });

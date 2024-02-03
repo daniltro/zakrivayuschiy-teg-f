@@ -76,6 +76,7 @@
 
 .like-icon:active .main-body {
   transition: fill 0.3s linear;
+  transition-delay: 0.05s;
   fill: var(--heart-svg-bg-color);
 }
 
@@ -86,7 +87,6 @@
 .like-icon.is-liked .sparks {
   animation: heart-sparks 0.3s ease-in 0.3s;
   animation-direction: alternate;
-  animation-iteration-count: 2;
 }
 
 .like-icon.is-liked .core {
@@ -96,6 +96,7 @@
 
 .like-icon.is-liked .main-body {
   transition: fill 0.3s linear;
+  transition-delay: 0.05s;
   fill: var(--heart-svg-bg-color);
 }
 
@@ -112,9 +113,4 @@
 .like-icon.is-liked .heart {
   animation: heart-scale 0.3s ease-in 0.1s alternate;
   transform-origin: center;
-  animation-iteration-count: 2;
 }
-/* В задании сказано, что нужно проиграть анимацию один раз (за что отвечает свойство animation-iteration-count: 1; -  значение по умолчанию), однако при таком значении свойство  animation-direction: alternate; не работает (видимо проигрывание анимации от начала к концу и наборот считается двумя повторениями). + к этому в демонстации данной анимации в руководстве к выполнению также не наблюдается обратного проигрывания анимации. Не совсем понял что нужно. Выше код который дает результат как в руководстве к выполнению работы  
-  
-  Тоже самое с анимацией искр (sparks) 
-  87ая строчка*/

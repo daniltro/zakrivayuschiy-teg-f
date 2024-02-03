@@ -2,11 +2,11 @@
 :root {
   --main-font: "Inter-Variable";
   --accent-font: PressStart2P;
-  --main-font-weight-text: 400;
-  --main-font-weight-title: 700;
+  --font-weight-text: 400;
+  --font-weight-title: 700;
   --bg-color: hsl(0, 0%, 100%);
   --accent-color: #000;
-  --text-stroke-color: rgba(255, 255, 255);
+  --text-stroke-color: #fff;
   --hover-color: #fff;
   --hover-bg-color: #fff;
   --heart-svg-color: #000;
