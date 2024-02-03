@@ -1,13 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --main-font: 'Inter-Variable';
+  --main-font: "Inter-Variable";
   --accent-font: PressStart2P;
   --main-font-weight-text: 400;
   --main-font-weight-title: 700;
-  --bg-color: #fff; 
+  --bg-color: #fff;
   --accent-color: #000;
   --text-stroke-color: rgba(255, 255, 255);
+  --hover-color: #fff;
+  --hover-bg-color: #fff;
+  --heart-svg-color: #000;
+  --heart-svg-bg-color: #ff0000;
   --bg-image: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
-repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
-linear-gradient(#e7e7e7, #1a1a1a);
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7, #1a1a1a);
 }

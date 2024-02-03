@@ -3,7 +3,29 @@
     min-block-size: 323px;
   }
 
-  .card {
-    margin-block-end: 52px;
+  .card__image {
+    block-size: 372px;
+  }
+
+  .card__content-box {
+    padding-inline-start: 23px;
+  }
+
+  .footer__button {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer__button .button__text {
+    display: block;
+  }
+
+  .footer__button-floppy {
+    transform: scale(1.35);
+  }
+
+  .footer__dialog {
+    padding: 30px 40px;
+    max-inline-size: 341px;
   }
 }

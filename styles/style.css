@@ -62,7 +62,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  font-size: .875rem;
+  font-size: 0.875rem;
   padding-inline-start: 18px;
 }
 
@@ -71,28 +71,28 @@
   border: none;
   text-transform: uppercase;
   padding: 0;
-  transition: .3s;
+  transition: 0.3s;
   position: relative;
 }
 
 .theme-menu__button:disabled {
-  opacity: .6;
+  opacity: 0.6;
   position: relative;
   pointer-events: none;
 }
 
 .theme-menu__button:disabled::after {
-  content: '▶';
+  content: "▶";
   inline-size: 14px;
   block-size: 14px;
   opacity: 0.6;
   position: absolute;
   left: -20px;
-  animation: arrow .5s ease-in-out infinite alternate;
-} 
+  animation: arrow 0.5s ease-in-out infinite alternate;
+}
 .theme-menu__button:hover {
   cursor: pointer;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .theme-menu__button:focus {
@@ -100,43 +100,34 @@
 }
 
 .theme-menu__button::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 2px;
   text-decoration: underline;
   position: absolute;
   background-color: var(--accent-color);
-  opacity: .6;
+  opacity: 0.6;
   bottom: -3px;
   left: 0;
   transform: scaleX(0);
-  transform-origin: left ;
-  transition: transform .3s ease;
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::before {
   transform: scaleX(1);
 }
 
-@keyframes arrow {
-  0% {
-    transform: translateX(0);
-  }
 
-  100% {
-    transform: translateX(4px);
-  }
-}
 /* ---------------------------------------------------HEADER STYLES END-------------------------------------------------- */
 
 /* ---------------------------------------------------CARDS STYLES START------------------------------------------------- */
 
-.cards {
-}
-.cards__list {
-}
 .cards__list-item {
+  margin-block-end: 52px;
 }
+
+
 .card {
   margin-block-end: 50px;
   background: var(--bg-color);
@@ -149,15 +140,14 @@
 }
 
 .card__title {
-  padding: 3px 10px 4px;
+  padding: 4px 10px 4px 8px;
   font-size: 1.125rem;
   border-inline: 2px solid var(--accent-color);
   border-block-start: 2px solid var(--accent-color);
-  /* border: 2px solid var(--accent-color); */
 }
+
 .card__image-box {
   max-block-size: 701px;
- 
   position: relative;
 }
 
@@ -167,11 +157,10 @@
   right: 25px;
   top: 27px;
   font-family: var(--accent-font);
-  -webkit-text-stroke: 1px var(--text-stroke-color); 
-  opacity: .5;
-  font-size: .875rem;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  opacity: 0.5;
+  font-size: 0.875rem;
 }
-
 
 .card__image {
   inline-size: 100%;
@@ -179,19 +168,52 @@
   object-fit: cover;
   object-position: center;
   border: 2px solid var(--accent-color);
-  
+}
+
+.card--multiple {
+  filter: brightness(2);
+  filter: contrast(2);
+  filter: blur(2px);
+}
+
+.card--contrast {
+  filter: contrast(2);
+}
+
+.card--grey-scale{
+  filter: grayscale(.9);
+}
+
+.card--hue-rotate {
+  filter: hue-rotate(90deg);
+}
+
+.card--invert {
+  filter: invert(.8);
+}
+
+.card--opacity {
+  filter: opacity(.5);
+}
+
+.card--saturate {
+  filter: saturate(3);
+}
+
+.card--sepia {
+  filter: sepia(3);
 }
 
 .card__content-box {
   border-inline: 2px solid var(--accent-color);
   border-block-end: 2px solid var(--accent-color);
-  padding: 26px 25px;
+  padding: 25px;
 }
 
 .card__description {
   font-size: 1.125rem;
   line-height: 21px;
-  margin-block-end: 26px;
+  margin-block-end: 25px;
 }
 
 .card__description:last-child {
@@ -202,31 +224,65 @@
   display: flex;
   justify-content: end;
   align-items: end;
-  gap: 16px;
+  gap: 6px;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  padding: 0;
+  transition: outline .3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .card__icon-button {
-  background-color: transparent;
+  outline: 2px solid transparent;
   border: none;
-  padding: 0;
+  display: flex;
+  align-items: end;
 }
 
-.like-icon {
-  
+.card__icon-button::before {
+  display: none;
+}
+
+.card__icon-button:focus-visible {
+  box-shadow: none;
+  outline: 2px solid var(--accent-color);
 }
 
 .card__like-button {
   font-family: var(--accent-font), sans-serif;
-  padding: 10px 35px;
-  background-color: transparent;
-  /* border: none; */
-  border: 2px solid var(--accent-color);
+  inline-size: 130px;
+  block-size: 38px;
   text-align: center;
   font-size: 14px;
   line-height: 90%;
 }
 
+.button::before {
+  content: "";
+  position: absolute;
+  background-color: var(--hover-bg-color);
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  mix-blend-mode: difference;
+}
 
+.button:hover::before {
+  transform: scaleX(1);
+}
 
 /* ---------------------------------------------------CARDS STYLES END------------------------------------------------- */
 
@@ -236,12 +292,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 54px 0 0;
 }
 .footer__button {
   background-color: transparent;
-  border: none;
-  border: 2px solid var(--accent-color);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -250,6 +303,53 @@
   background-color: var(--bg-color);
   font-size: 14px;
   line-height: 90%;
+
+}
+
+.footer__button-floppy {
+  width: 21px;
+  height: 21px;
+}
+
+.footer__dialog .footer__button-floppy {
+  transform: scale(2);
+}
+
+.footer__dialog {
+  max-inline-size: 357px;
+  padding: 30px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
+}
+
+.footer__dialog::backdrop {
+  background: rgba(0, 0, 0, .75);
+}
+
+.footer__dialog-content {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 29px;
+  margin-block-end: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 10px;
+}
+
+.footer__dialog-title {
+  font-family: var(--accent-font);
+  font-size: .875rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
+.dialog__button {
+  inline-size: 100%;
+  padding: 9px 17px 9px 17px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-family: var(--accent-font);
 }
 
 
