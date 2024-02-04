@@ -35,3 +35,11 @@
     max-inline-size: 341px;
   }
 }
+
+@media ( width < 350px) {
+  .header__logo {
+    font-size: 46px;
+  }
+}
+  
+
