@@ -36,10 +36,5 @@
   }
 }
 
-@media ( width < 350px) {
-  .header__logo {
-    font-size: 44px;
-  }
-}
   
 
