@@ -87,6 +87,7 @@
 .like-icon.is-liked .sparks {
   animation: heart-sparks 0.3s ease-in 0.3s;
   animation-direction: alternate;
+  animation-iteration-count: 2;
 }
 
 .like-icon.is-liked .core {
@@ -113,4 +114,5 @@
 .like-icon.is-liked .heart {
   animation: heart-scale 0.3s ease-in 0.1s alternate;
   transform-origin: center;
+  animation-iteration-count: 2;
 }

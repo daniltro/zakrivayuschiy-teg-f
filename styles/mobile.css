@@ -4,15 +4,17 @@
   }
 
   .card__subtitle {
-    right: 11px;
+    top: 22px;
+    right: 10px;
   }
  
-  .card__image {
+  .card__image-box {
     block-size: 372px;
   }
 
   .card__content-box {
     padding-inline-start: 23px;
+    padding-block-start: 28px;
   }
 
   .save-button {
